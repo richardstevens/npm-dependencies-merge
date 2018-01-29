@@ -1,8 +1,8 @@
-var semver = /^(\^|#|v)?(?:\d+)(\.(?:[x*]|\d+)(\.(?:[x*]|\d+)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?)?)?$/i
+var semver = /^(\^|~|#|v)?(?:\d+)(\.(?:[x*]|\d+)(\.(?:[x*]|\d+)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?)?)?$/i
 var patch = /-([0-9A-Za-z-.]+)/
 
 function split (v) {
-  if (v[0] === 'v' || v[0] === '^' || v[0] === '#') v = v.slice(1)
+  if (v[0] === 'v' || v[0] === '^' || v[0] === '#' || v[0] === '~') v = v.slice(1)
   var temp = v.split('.')
   var arr = temp.splice(0, 2)
   arr.push(temp.join('.'))
