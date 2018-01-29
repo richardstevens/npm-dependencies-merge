@@ -1,0 +1,27 @@
+{
+  "name": "npm-dependencies-merge",
+  "version": "1.0.0",
+  "description": "Merges dependencies from multiple package.json files.",
+  "keywords": [
+    "package.json",
+    "npm",
+    "dependencies",
+    "merge",
+    "devdependencies"
+  ],
+  "main": "bin/npm-dependencies-merge.js",
+  "author": "Richard Stevens <rsrichardstevens@googlemail.com>",
+  "repository": "git@github.com:richardstevens/npm-dependencies-merge.git",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "2.2.0",
+    "concat-stream": "1.4.6",
+    "dive": "0.3.0",
+    "graceful-fs": "^4.1.11",
+    "npmenv": "0.0.1",
+    "npmlog": "~0.1.1"
+  },
+  "bin": {
+    "npm-dependencies-merge": "./bin/npm-dependencies-merge"
+  }
+}
