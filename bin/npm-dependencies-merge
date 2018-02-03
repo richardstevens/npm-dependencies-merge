@@ -12,4 +12,4 @@ app
   .option('-f, --files [file]', 'search for files named [file]')
   .parse(process.argv);
 
-analyze({ combine: app.compine, silent: app.silent, file: app.files }, output(app));
+analyze({ combine: app.combine, silent: app.silent, file: app.files }, output(app));
