@@ -43,7 +43,7 @@ function analyze (options, callback) {
       addDependencies(data.dependencies, rel, 'production')
 
       // Extract development dependencies
-      addDependencies(data.devDependencies, rel, 'development')
+      addDependencies(data.devDependencies, rel, options.combine ? 'production' : 'development')
 
       --pending
       checkReady()

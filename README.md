@@ -24,6 +24,7 @@ attributes, like name and version, can be stored in a separate file such as
     -h, --help           output usage information
     -V, --version        output the version number
     -s, --silent         do not print out warnings
+    -c, --combine        combine dependencies and devDependencies
     -f, --files          files to search for (Default: package.json)
     -o, --output [file]  output to a file
 
