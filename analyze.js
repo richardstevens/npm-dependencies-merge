@@ -21,7 +21,7 @@ function analyze (options, callback) {
     // don't process any `node_modules` directories
     var nodeModules = 'node_modules'
     if (nodeModules === rel.substring(0, nodeModules.length)) {
-      log.verbose('analyze', 'skipping `node_modules` directory: %s', dir)
+      // log.verbose('analyze', 'skipping `node_modules` directory: %s', dir)
       return
     }
 
@@ -62,8 +62,6 @@ function analyze (options, callback) {
       } else {
         // check for inconsistent dependency versions.
         if (result[dep].version != version) {
-          log.info(result[dep].version, version)
-          log.info(compare(result[dep].version, version).toString())
           if (compare(result[dep].version, version) < 0) {
             log.info('overwriting', 'old version of %s@%s now using %s', dep, result[dep].version, version)
             result[dep] = { version: version, type: type }
